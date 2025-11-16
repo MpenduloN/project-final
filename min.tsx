@@ -1,7 +1,7 @@
 // Get backend URL from environment
 const API_URL = import.meta.env.VITE_API_URL;
 
-// Example fetch call
+// Example fetch call ()
 async function fetchData() {
   try {
     const response = await fetch(`${API_URL}/your-endpoint`);
