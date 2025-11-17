@@ -1,3 +1,4 @@
+// src/App.tsx
 import { useState } from "react";
 import { AuthProvider, useAuth } from "./contexts/AuthContext";
 import { Auth } from "./components/Auth";
@@ -16,18 +17,27 @@ function AppContent() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 flex items-center justify-center">
-        <div className="text-center">
-          <div className="w-16 h-16 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
-          <p className="text-gray-600 font-medium">Loading...</p>
-        </div>
+      <div className="min-h-screen flex items-center justify-center">
+        <p>Loading...</p>
       </div>
     );
   }
 
-  if (!user) {
-    return <Auth />;
-  }
+  if (!user) return <Auth />;
 
   const renderView = () => {
-    switch (c
+    switch (currentView) {
+      case "dashboard":
+        return <Dashboard />;
+      case "transactions":
+        return <Transactions />;
+      case "accounts":
+        return <Accounts />;
+      case "loans":
+        return <Loans />;
+      case "goals":
+        return <Goals />;
+      case "chat":
+        return <Chat />;
+      case "credit":
+        return <CreditScore />;
