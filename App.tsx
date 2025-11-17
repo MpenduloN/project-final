@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { AuthProvider, useAuth } from "./AuthContext";
 import { Auth } from "./components/Auth";
-import { Layout } from "./components/Layout";
+import { Auth } from "./components/Auth";
 import { Dashboard } from "./components/Dashboard";
 import { Transactions } from "./components/Transactions";
 import { Accounts } from "./components/Accounts";
