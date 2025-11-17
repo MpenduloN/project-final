@@ -9,6 +9,8 @@ import { Loans } from './components/Loans';
 import { Goals } from './components/Goals';
 import { Chat } from './components/Chat';
 import { CreditScore } from './components/CreditScore';
+import App from "./App";
+
 
 function AppContent() {
   const { user, loading } = useAuth();
